@@ -1,0 +1,51 @@
+<!doctype html>
+<!-- alogin.html -->
+
+<html lang="en">
+<head>
+  <title>Redirect -> Status</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="pragma" content="no-cache"/>
+  <meta http-equiv="expires" content="-1"/>
+  <meta http-equiv="refresh" content="2; url=$(link-redirect)"/>
+  <link rel="stylesheet" href="./cssStyle.css"/>
+  <link rel="icon" href="./xFiles/favicon.ico"/>
+  <script>
+    function startClock() {
+      $(if popup == 'true')
+      open('$(link-status)', 'hotspot_status', 'toolbar=0,location=0,directories=0,status=0,menubars=0,resizable=1,width=290,height=200');
+      $(endif)
+      location.href = unescape('$(link-redirect-esc)');
+    }
+  </script> 
+</head>
+<body onLoad="startClock()">
+  <div class="cssMain">
+    <div class="cssMainLogo" style="display:block">
+      <h2>You are logged in</h2>
+      <h2>Unable to Redirect Page</h2>
+      <h3><a href="$(link-redirect)">[ Click here to manually redirect page ]</a></h3>
+    </div>
+  </div>
+  <script>
+  var mPageVar = {
+    "page"         : "alogin.html",
+    "user"         : "$(username)",
+    "ip"           : "$(ip)",
+    "mac"          : "$(mac)",
+    "error"        : "$(error)",
+    "errororig"    : "$(error-orig)",
+    "loggedin"     : "$(logged-in)",
+    "loginby"      : "$(login-by)",
+    "hostname"     : "$(hostname)",
+    "linklogin"    : "$(link-login)",
+    "linklogout"   : "$(link-logout)",
+    "linkstatus"   : "$(link-status)",
+    "linkredirect" : "$(link-redirect)",
+    "linkredirect" : "$(link-redirect)",
+    "copyright"    : "Edmar Lozada"
+  }; // mPageVar
+  </script>
+</body>
+</html>
