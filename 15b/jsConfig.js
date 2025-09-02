@@ -2,32 +2,32 @@
 
 // true  = the voucher name will be the MAC address of the device
 // false = the voucher name will be given by the vendo machine
-cfg_MacAsVoucher = false; //( NOT-IMPLEMENTED )
+var cfg_MacAsVoucher = false; //( NOT-IMPLEMENTED )
 
 // true  = multivendo
 // false = singlevendo
-cfg_MultiVendo = false;
+var cfg_MultiVendo = false;
 
 // 0 = manual vendo   ( user selects vendo manually ) ( NOT-IMPLEMENTED )
 // 1 = auto select vendo ( by hotspot address ) ( NOT-IMPLEMENTED )
 // 2 = auto select vendo ( by Interface Name  )
-cfg_MultiVendoBy = 2;
+var cfg_MultiVendoBy = 2;
 
 // true  = login requires voucher only ( no password )
 // false = login requires voucher & password ( password = voucher )
-cfg_NameOnly = true; // will be overruled if multivendo
+var cfg_NameOnly = true; // will be overruled if multivendo
 
 // default single vendo display name ( displayed in portal )
-cfg_VendoName = "VendoName"; // will be overruled if multivendo
+var cfg_VendoName = "VendoName"; // will be overruled if multivendo
 
 // default single vendo ip address for coin acceptor
-cfg_VendoIP = "10.0.0.2"; // will be overruled if multivendo
+var cfg_VendoIP = "10.0.0.2"; // will be overruled if multivendo
 
 // auto pick vendo list config ( by: Interface )
 // VendoIP   per vendo will overrule cfg_VendoIP
 // NameOnly  per vendo will overrule cfg_NameOnly
 // VendoName per vendo will overrule cfg_VendoName
-cfg_VendoList = [
+var cfg_VendoList = [
   {
     VendoIP   : "10.10.10.2", // vendo ip address for coin acceptor
     NameOnly  : false,        // login name only or password = voucher
@@ -62,7 +62,7 @@ cfg_VendoList = [
 /* below to your native language  */
 /* ============================== */
 
-cfg_MsgMap = {
+var cfg_MsgMap = {
 
 /* Portal Messages */
   "v.login"          : "Please fill out Voucher Code\nthen click [ LOGIN ]",
